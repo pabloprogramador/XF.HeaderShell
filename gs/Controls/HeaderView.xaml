@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="gs.Controls.HeaderView" BackgroundColor="#232323">
+    <ContentView.Content>
+        <StackLayout>
+            <StackLayout VerticalOptions="CenterAndExpand">
+            <Image x:Name="pgUser" Source="user.png" WidthRequest="180"/>
+                <StackLayout x:Name="pgText" VerticalOptions="CenterAndExpand" >
+            <Label LineBreakMode="TailTruncation" x:Name="pgUserText" HorizontalOptions="Start" Text="Name of Guy Boy" FontSize="25" TextColor="White"/>
+            <Label LineBreakMode="TailTruncation" x:Name="pgTeamText" HorizontalOptions="Start" Text="Name of Team" FontSize="17" TextColor="#00b226"/>
+             </StackLayout>
+             </StackLayout>
+        </StackLayout>
+        
+    </ContentView.Content>
+</ContentView>
