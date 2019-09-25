@@ -39,23 +39,24 @@ namespace gs
             header.textStack.TranslationY = -(120 - (cont * 120 / hbase));
             header.textStack.Scale = .8 + (cont * .2 / hbase);
 
-
             //Usando regra de 3 e para fazer uma pequena curca nos textos, fica interessante para não ´bater´ na foto, eu uso antigos espiritos da matemática, neste caso o seno.
             double resTeam;
             double resUser;
             double waveQt = 3.1; // frequencia da onda
             double waveDist = 100; // largura da onda.
 
-            double teamIni = header.Width / 2 - header.labelTeam.Width / 2; //posicao inicial
-            double teamEnd = 70;
-            double userIni = header.Width / 2 - header.labelUser.Width / 2; //posicao final
+            double teamIni = header.Width / 2 - header.labelTeam.Width / 2; //posicao inicial, centraliza
+            double teamEnd = 70; // posicao final, a 70 pixel de distancia, (espaco para a foto)
+            double userIni = header.Width / 2 - header.labelUser.Width / 2; 
             double userEnd = 70;
           
             resTeam = teamEnd +  (cont * (teamIni - teamEnd) / hbase) ;
             resUser = userEnd + (cont * (userIni - userEnd) / hbase);
             var curva = resUser + (waveDist * Math.Sin((cont / hbase) * waveQt));
+            // professora que dia que eu vou usar seno na minha vida ???... pois...
             var curvaTeam = resTeam + (waveDist * Math.Sin((cont / hbase) * waveQt));
-
+            
+            
             header.labelUser.TranslationX = curva;
             header.labelTeam.TranslationX = curvaTeam;
 
